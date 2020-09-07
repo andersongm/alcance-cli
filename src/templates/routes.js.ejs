@@ -1,0 +1,11 @@
+var express = require('express');
+var router = express.Router();
+const <%= props.name %>Controller = require('../controllers/<%=props.name%>');
+
+router.get('/', <%= props.name %>Controller.index);
+router.get('/:id', <%= props.name %>Controller.show);
+router.post('/new', <%= props.name %>Controller.store);
+router.put('/edit/:id', <%= props.name %>Controller.update);
+router.delete('delete/:id', <%= props.name %>Controller.destroy);
+
+module.exports = router;

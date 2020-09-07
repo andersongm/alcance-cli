@@ -1,0 +1,16 @@
+const mongoose = require('mongoose');
+const mongoosePaginate = require('mongoose-paginate');
+
+const <%= props.name %>Schema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true
+    },
+}, { collection: 'car_<%= String(props.name).toLowerCase() %>', timestamps: true },
+);
+
+<%= props.name %>Schema.plugin(mongoosePaginate);
+
+const <%= props.name %> = mongoose.model('<%= props.name %>', <%= props.name %>Schema);
+
+module.exports = <%= props.name %>;
