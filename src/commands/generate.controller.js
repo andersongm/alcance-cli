@@ -13,7 +13,7 @@ module.exports = {
   
       await generate({
         template: 'controller.js.ejs',
-        target: `controllers/${name}/index.js`,
+        target: `src/controllers/${name}/index.js`,
         props: { name }
       })
   
