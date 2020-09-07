@@ -1,6 +1,6 @@
 {
   "name": "alcance-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "alcance-cli CLI",
   "private": true,
   "bin": {
