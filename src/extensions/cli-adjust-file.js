@@ -4,15 +4,11 @@ const { renameRoute } = require('../util');
 module.exports = toolbox => {
     toolbox.adjustFile = async (name) => {
 
-        const caminho = "";//path.join(__dirname, '..', '..');
-
-        console.log(caminho);
-
         var fs = require('fs'),
             readline = require('readline');
 
         var rd = readline.createInterface({
-            input: fs.createReadStream(caminho + 'app.js'),
+            input: fs.createReadStream('app.js'),
             console: false
         });
 
@@ -33,12 +29,12 @@ module.exports = toolbox => {
             rd.on('line', (line) => {
                 if (search1.test(line)) {
                     //console.log(varRoute);
-                    lines += varRoute.concat('\n');
+                    lines += varRoute.concat(' // Automatically generated').concat('\n');
                 }
 
                 if (search2.test(line)) {
                     //console.log(`app.use(${nameRoute});`);
-                    lines += `app.use(${nameRoute});`.concat('\n');
+                    lines += `app.use(${nameRoute});`.concat(' // Automatically generated').concat('\n');
                 }
 
                 lines += line + '\n'

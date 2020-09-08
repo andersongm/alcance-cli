@@ -16,13 +16,8 @@ module.exports = {
 
     const name = parameters.first
 
-    //console.log('Iniciou Ajuste File App');
-    //const caminho = path.join(__dirname, '..', 'testeFolder');
-    const caminho = "";//path.join(__dirname, '..', '..');
-
-    console.log(caminho);
     const targetFile = await adjustFile(name);
-    fs.writeFileSync(caminho+'app.js',targetFile);
+    fs.writeFileSync('app.js',targetFile);
     
     info(`App.js was updated`)
 
