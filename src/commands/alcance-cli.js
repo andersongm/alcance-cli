@@ -7,7 +7,8 @@ const command = {
     const {
       parameters,
       template: { generate },
-      print: { info }
+      print: { info },
+      adjustFile
     } = toolbox
 
     const name = parameters.first
@@ -23,6 +24,12 @@ const command = {
       target: `src/controllers/${name}/index.js`,
       props: { name }
     })
+
+    const targetFile = await adjustFile(name);
+    fs.writeFileSync('app.js',targetFile);
+    
+    info(`App.js was updated`)
+
     await generate({
       template: 'routes.js.ejs',
       target: `src/routes/${String(name).toLowerCase()}.js`,
