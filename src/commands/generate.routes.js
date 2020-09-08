@@ -18,7 +18,7 @@ module.exports = {
 
     //console.log('Iniciou Ajuste File App');
     //const caminho = path.join(__dirname, '..', 'testeFolder');
-    const caminho = path.join(__dirname, '..', '..');
+    const caminho = "";//path.join(__dirname, '..', '..');
 
     console.log(caminho);
     const targetFile = await adjustFile(name);

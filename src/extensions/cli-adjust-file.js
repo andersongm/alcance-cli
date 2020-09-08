@@ -4,7 +4,7 @@ const { renameRoute } = require('../util');
 module.exports = toolbox => {
     toolbox.adjustFile = async (name) => {
 
-        const caminho = path.join(__dirname, '..', '..');
+        const caminho = "";//path.join(__dirname, '..', '..');
 
         console.log(caminho);
 
