@@ -1,4 +1,4 @@
-const modelCommand = require('./generate.model');
+const fs = require('fs');
 
 const command = {
   name: 'generate:full',

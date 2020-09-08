@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 module.exports = {
   name: 'generate:route',
   description: 'Create a new Route',
@@ -10,9 +12,7 @@ module.exports = {
       print: { info },
       adjustFile
     } = toolbox
-
-    const fs = require('fs');
-
+    
     const name = parameters.first
 
     const targetFile = await adjustFile(name);
