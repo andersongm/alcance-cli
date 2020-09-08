@@ -22,7 +22,7 @@ module.exports = {
 
     console.log(caminho);
     const targetFile = await adjustFile(name);
-    fs.writeFileSync(caminho+'/app.js',targetFile);
+    fs.writeFileSync(caminho+'app.js',targetFile);
     
     info(`App.js was updated`)
 

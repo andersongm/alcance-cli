@@ -12,7 +12,7 @@ module.exports = toolbox => {
             readline = require('readline');
 
         var rd = readline.createInterface({
-            input: fs.createReadStream(caminho + '/app.js'),
+            input: fs.createReadStream(caminho + 'app.js'),
             console: false
         });
 
